@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+}
+
+.show-error {
+  display: block;
+}
+
+.gap-1 {
+  gap: 1rem;
+}

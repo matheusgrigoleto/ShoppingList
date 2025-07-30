@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFFFFF;
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+
+  --ff-base: "Inter", sans-serif;
+  --text-lg: 1.5rem;
+  --text-md: 1rem;
+  --text-sm: 0.875rem;
+}
+
+h1 {
+  font: 700 2 / var(--text-lg) var(--ff-base);
+}
+
+p {
+  font: 500 1.25 / var(--text-md) var(--ff-base);
+}
+
+a {
+  font: 500 1 / var(--text-sm) var(--ff-base);
+}
+
+
