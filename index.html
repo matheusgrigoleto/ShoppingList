@@ -58,8 +58,12 @@
       </header>
       <div class="addProducts flex flex-column gap-2">
         <div class="addItem flex gap-1">
-          <input type="text" placeholder="Adicione um novo item" />
-          <button>Adicionar item</button>
+          <input
+            id="textItem"
+            type="text"
+            placeholder="Adicione um novo item"
+          />
+          <button id="buttonAdd">Adicionar item</button>
         </div>
         <div class="ListContainer">
           <ul id="list" class="flex gap-1 flex-column">
@@ -69,7 +73,7 @@
                 <span></span>
                 Pão de forma
               </label>
-              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+              <img class="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
             </li>
             <li>
               <label>
@@ -77,7 +81,7 @@
                 <span></span>
                 Café preto
               </label>
-              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+              <img class="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
             </li>
             <li>
               <label>
@@ -85,7 +89,7 @@
                 <span></span>
                 Suco de laranja
               </label>
-              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+              <img class="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
             </li>
             <li>
               <label>
@@ -93,12 +97,12 @@
                 <span></span>
                 Bolacha
               </label>
-              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+              <img class="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
             </li>
           </ul>
         </div>
       </div>
-      <div id="error" class="errorList flex">
+      <div class="errorList flex">
         <label class="labelError flex gap-0.5">
           <svg
             width="20"
@@ -117,6 +121,7 @@
           O item foi removido da lista
         </label>
         <svg
+          class="closeError"
           width="12"
           height="12"
           viewBox="0 0 12 12"
@@ -132,5 +137,6 @@
         </svg>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

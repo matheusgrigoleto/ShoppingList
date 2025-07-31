@@ -65,7 +65,9 @@ header {
 
     & ul {
       height: 100%;
+      max-height: 35vh;
       width: 100%;
+      overflow-y: auto;
       & li {
         display: flex;
         border-radius: 0.75rem;
@@ -113,7 +115,7 @@ header {
           }
         }
 
-        & #deleted {
+        & .deleted {
           cursor: pointer;
         }
       }
@@ -134,5 +136,9 @@ header {
     color: #ffffff;
     display: flex;
     align-items: center;
+  }
+
+  & .closeError{
+    cursor: pointer;
   }
 }

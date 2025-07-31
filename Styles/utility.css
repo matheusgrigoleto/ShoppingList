@@ -7,7 +7,7 @@
 }
 
 .show-error {
-  display: block;
+  display: flex !important;
 }
 
 .gap-0\.5 {
