@@ -2,10 +2,22 @@
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .show-error {
   display: block;
 }
 
+.gap-0\.5 {
+  gap: 0.5rem;
+}
+
 .gap-1 {
   gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
 }

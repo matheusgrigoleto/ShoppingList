@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="Styles/index.css" />
   </head>
   <body>
-    <header>
+    <header class="header-logo">
       <img src="/Assets/logo.png" alt="Logo Quicklist" />
     </header>
-    <main class="container">
-      <header>
-        <div class="backbutton">
+    <main class="container flex gap-2">
+      <header class="flex gap-1 flex-column">
+        <div class="backbutton flex gap-0.5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="16px"
-            height="16px"
+            width="14px"
+            height="14px"
             viewBox="0 -6.5 38 38"
             version="1.1"
           >
@@ -56,46 +56,80 @@
         </div>
         <h1>Compras da semana</h1>
       </header>
-      <div class="ListContainer">
-        <div class="addItem">
-          <input type="text" />
-          <input type="button" />
+      <div class="addProducts flex flex-column gap-2">
+        <div class="addItem flex gap-1">
+          <input type="text" placeholder="Adicione um novo item" />
+          <button>Adicionar item</button>
         </div>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Pão de forma
-            </label>
-            <img src="Assets/Icons/deleteItem.svg" alt="" />
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Café preto
-            </label>
-            <img src="Assets/Icons/deleteItem.svg" alt="" />
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Suco de laranja
-            </label>
-            <img src="Assets/Icons/deleteItem.svg" alt="" />
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Bolacha
-            </label>
-            <img src="Assets/Icons/deleteItem.svg" alt="" />
-          </li>
-        </ul>
+        <div class="ListContainer">
+          <ul id="list" class="flex gap-1 flex-column">
+            <li>
+              <label>
+                <input type="checkbox" />
+                <span></span>
+                Pão de forma
+              </label>
+              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" />
+                <span></span>
+                Café preto
+              </label>
+              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" />
+                <span></span>
+                Suco de laranja
+              </label>
+              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" />
+                <span></span>
+                Bolacha
+              </label>
+              <img id="deleted" src="Assets/Icons/deleteItem.svg" alt="" />
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="error">
-        <img src="Assets/Icons/warning.svg" alt="" />
-        <label>O item foi removido da lista</label>
-        <img src="Assets/Icons/delete.svg" alt="">
+      <div id="error" class="errorList flex">
+        <label class="labelError flex gap-0.5">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.43998 0.672189C8.7639 0.731429 8.34938 0.792109 7.88278 0.900069C5.60786 1.42647 3.59126 2.81111 2.2759 4.74989C1.21062 6.32005 0.660522 8.10789 0.660522 9.99989C0.660522 11.9689 1.25678 13.8257 2.40742 15.4399C3.7175 17.2777 5.70576 18.6026 7.90998 19.1064C9.41086 19.4495 11.0523 19.4105 12.52 18.997C14.7279 18.3748 16.609 16.9818 17.8636 15.0399C18.2023 14.5156 18.4457 14.0382 18.6995 13.3999C19.3759 11.6994 19.522 9.72779 19.1065 7.90989C18.637 5.85567 17.4589 3.99197 15.8 2.67891C14.4018 1.57225 12.7721 0.906069 10.98 0.708689C10.706 0.678509 9.65264 0.653549 9.43998 0.672189ZM9.84388 5.30123C9.55192 5.35871 9.31072 5.61583 9.26092 5.92265C9.23486 6.08333 9.23304 10.2564 9.25898 10.4357C9.29482 10.6836 9.44756 10.8919 9.67586 11.0043C9.79826 11.0645 9.82472 11.0699 9.99998 11.0699C10.1752 11.0699 10.2017 11.0645 10.3241 11.0043C10.5524 10.8919 10.7051 10.6836 10.741 10.4357C10.7669 10.2564 10.7651 6.08333 10.739 5.92265C10.6878 5.60721 10.4486 5.35841 10.1401 5.29991C10.0196 5.27707 9.96536 5.27731 9.84388 5.30123ZM9.85954 12.5596C9.60484 12.592 9.38812 12.7084 9.19692 12.9155C8.9555 13.177 8.8655 13.5362 8.95078 13.898C9.01322 14.163 9.213 14.4276 9.4614 14.5745C9.59266 14.6521 9.8437 14.7199 9.99998 14.7199C10.1563 14.7199 10.4073 14.6521 10.5386 14.5745C10.787 14.4276 10.9867 14.163 11.0492 13.898C11.1345 13.5362 11.0445 13.177 10.803 12.9155C10.5499 12.6413 10.214 12.5146 9.85954 12.5596Z"
+              fill="White"
+            />
+          </svg>
+          O item foi removido da lista
+        </label>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L6 4.93934L10.4697 0.46967C10.7626 0.176777 11.2374 0.176777 11.5303 0.46967C11.8232 0.762563 11.8232 1.23744 11.5303 1.53033L7.06066 6L11.5303 10.4697C11.8232 10.7626 11.8232 11.2374 11.5303 11.5303C11.2374 11.8232 10.7626 11.8232 10.4697 11.5303L6 7.06066L1.53033 11.5303C1.23744 11.8232 0.762563 11.8232 0.46967 11.5303C0.176777 11.2374 0.176777 10.7626 0.46967 10.4697L4.93934 6L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+            fill="White"
+          />
+        </svg>
       </div>
     </main>
   </body>
