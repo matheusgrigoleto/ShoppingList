@@ -52,3 +52,11 @@ body {
 ul {
   list-style: none;
 }
+
+@media (max-width: 26.875em) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

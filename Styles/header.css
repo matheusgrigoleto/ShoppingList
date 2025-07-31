@@ -5,3 +5,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (width <= 26.875em) {
+  .header-logo {
+    display: none;
+  }
+}
